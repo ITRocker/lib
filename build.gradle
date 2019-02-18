@@ -1,0 +1,35 @@
+apply plugin: 'java-library'
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.github.megatronking:svg-generator:1.3.6'
+}
+tasks.withType(JavaCompile) {
+    options.encoding = 'utf-8'
+}
+sourceCompatibility = "8"
+targetCompatibility = "8"
+version='1.0.0'
+
+
+// 发布maven配置
+apply plugin: 'maven'
+apply plugin: 'maven-publish'
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url:"file://C:\\Users\\Administrator\\.m2\\repository")
+            pom.groupId = 'cn.mydreamy.gradle.plugin'
+            pom.artifactId = 'lib'
+            pom.version = '1.0.0'
+
+            pom.project {
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+            }
+        }
+    }
+}
