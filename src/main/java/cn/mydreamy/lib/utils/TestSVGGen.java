@@ -23,7 +23,7 @@ public class TestSVGGen {
 
     /**
      * 绘制Html5使用的svg,android不能使用
-     * @param g2d
+     * @param g2d the Graphics2D image
      */
     public void paint(Graphics2D g2d) {
         BufferedImage image = null;

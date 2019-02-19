@@ -113,7 +113,6 @@ public class VectorizingUtils {
 	}// End of colorquantization
 
 	// 2. Layer separation and edge detection
-	// Edge node types ( ▓:light or 1; ░:dark or 0 )
 	// 12  ░░  ▓░  ░▓  ▓▓  ░░  ▓░  ░▓  ▓▓  ░░  ▓░  ░▓  ▓▓  ░░  ▓░  ░▓  ▓▓
 	// 48  ░░  ░░  ░░  ░░  ░▓  ░▓  ░▓  ░▓  ▓░  ▓░  ▓░  ▓░  ▓▓  ▓▓  ▓▓  ▓▓
 	//     0   1   2   3   4   5   6   7   8   9   10  11  12  13  14  15
@@ -184,8 +183,6 @@ public class VectorizingUtils {
 	
     
 	// 3. Walking through an edge node array, discarding edge node types 0 and 15 and creating paths from the rest.
-	// Walk directions (dir): 0 > ; 1 ^ ; 2 < ; 3 v
-	// Edge node types ( ▓:light or 1; ░:dark or 0 )
 	// ░░  ▓░  ░▓  ▓▓  ░░  ▓░  ░▓  ▓▓  ░░  ▓░  ░▓  ▓▓  ░░  ▓░  ░▓  ▓▓
 	// ░░  ░░  ░░  ░░  ░▓  ░▓  ░▓  ░▓  ▓░  ▓░  ▓░  ▓░  ▓▓  ▓▓  ▓▓  ▓▓
 	// 0   1   2   3   4   5   6   7   8   9   10  11  12  13  14  15

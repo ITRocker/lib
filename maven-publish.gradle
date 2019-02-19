@@ -3,7 +3,7 @@ apply plugin: 'com.novoda.bintray-release'//添加jcenter发布插件
 
 def GROUP = 'cn.mydreamy.gradle.plugin'
 def ARTIFACT_ID = 'lib'
-def VERSION = '1.0.0'
+def VERSION = '1.0.1'
 
 //工程gradle配置 classpath 'com.novoda:bintray-release:+'
 //添加发布命令gradlew clean build bintrayUpload -PbintrayUser=xxxxx -PbintrayKey=xxxxx -PdryRun=false
@@ -15,26 +15,4 @@ publish {
     publishVersion = VERSION//版本号
     desc = 'Image optimizer gradle plugin lib.'//描述，不重要
     website = 'https://github.com/ITRocker/lib'//网站，最好有，不重要
-}
-
-// 发布本地maven配置
-apply plugin: 'maven'
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            repository(url:"file://C:\\Users\\Administrator\\.m2\\repository")
-            pom.groupId = 'cn.mydreamy.gradle.plugin'
-            pom.artifactId = 'lib'
-            pom.version = '1.0.0'
-
-            pom.project {
-                licenses {
-                    license {
-                        name 'The Apache Software License, Version 2.0'
-                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-                    }
-                }
-            }
-        }
-    }
 }

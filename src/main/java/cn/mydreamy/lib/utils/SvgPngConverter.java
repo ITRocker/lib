@@ -8,9 +8,7 @@ import org.apache.batik.transcoder.TranscoderOutput;
 import org.apache.batik.transcoder.image.PNGTranscoder;
 
 /**
- * 将svg转换为png格式的图片
- * 
- * 
+ * 将svg转png
  */
 public class SvgPngConverter {
 
@@ -18,7 +16,7 @@ public class SvgPngConverter {
      * 将svg字符串转换为png
      * 
      * @param svgCode svg代码
-     * @param pngFilePath 保存的路径
+     * @param pngFilePath 保存路径
      * @throws TranscoderException svg代码异常
      * @throws IOException io错误
      */
@@ -47,7 +45,7 @@ public class SvgPngConverter {
      * 将svgCode转换成png文件，直接输出到流中
      * 
      * @param svgCode svg代码
-     * @param outputStream 输出流
+     * @param outputStream outputStream
      * @throws TranscoderException 异常
      * @throws IOException io异常
      */
@@ -74,8 +72,8 @@ public class SvgPngConverter {
     /**
      * 将svg文件转换成png文件
      *
-     * @param svgFilePath
-     * @param pngFilePath
+     * @param svgFilePath input file
+     * @param pngFilePath output file
      * @throws TranscoderException 异常
      * @throws IOException io异常
      */

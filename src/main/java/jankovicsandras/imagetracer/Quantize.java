@@ -268,6 +268,8 @@ for (int i = 0; i < MAX_TREE_DEPTH + 1; ++i) {
 /**
 * Reduce the image to the given number of colors. The pixels are
 * reduced in place.
+ * @param pixels pixels
+ * @param max_colors the max colors
 * @return The new color palette.
 */
 public static int[] quantizeImage(int pixels[][], int max_colors) {
